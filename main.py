@@ -3,17 +3,23 @@ If you have access to a SenseHAT (either via a Raspberry Pi or a SenseHAT emulat
 That is, delete the sense_hat.py file that is included in this bundle."""
 
 import time
-
 from happy import Happy
+#from sad import Sad
+#from angry import Angry
 
 def main():
+    """
+    Calls a class of Smiley to display.
+    """
     smiley = Happy()
+    #smiley = Sad()
+    #smiley = Angry()
 
     smiley.show()
 
-    time.sleep(1)
-
-    smiley.blink()
+    while True:
+        time.sleep(1)
+        smiley.blink()
 
 if __name__ == '__main__':
     ############################################################
